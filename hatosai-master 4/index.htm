@@ -1,0 +1,128 @@
+<html>
+    <head>
+   
+        <meta charset="utf-8">
+    
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Hatoko no zouki</title>
+  </head>
+  <body style="margin:0px; overflow:hidden;">
+    <!-- A-Frame ライブラリの読み込み -->
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <!-- AR.js ライブラリの読み込み -->
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+
+    <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
+    <a-scene embedded arjs="debugUIEnabled:false;">
+
+           
+            <!-- obj mtl 追加部分 -->
+            <a-assets>
+                <a-asset-item id="stomac-obj" src="model_obj/stomac/stomac.obj"></a-asset-item>
+                <a-asset-item id="stomac-mtl" src="model_obj/stomac/stomac.mtl"></a-asset-item>
+            </a-assets>
+            
+            <a-assets>
+                <a-asset-item id="stomach-obj" src="model_obj/stomach/stomach.obj"></a-asset-item>
+                <a-asset-item id="stomach-mtl" src="model_obj/stomach/stomach.mtl"></a-asset-item>
+            </a-assets>
+            
+            <a-assets>
+                <a-asset-item id="brain-obj" src="model_obj/brain/brain.obj"></a-asset-item>
+                <a-asset-item id="brain-mtl" src="model_obj/brain/brain.mtl"></a-asset-item>
+            </a-assets>
+            
+            <a-assets>
+                <a-asset-item id="butterfly-obj" src="model_obj/butterfly/butterfly.obj"></a-asset-item>
+                <a-asset-item id="butterfly-mtl" src="model_obj/butterfly/butterfly.mtl"></a-asset-item>
+            </a-assets>
+            
+            <a-assets>
+                <a-asset-item id="ear-obj" src="model_obj/ear/ear.obj"></a-asset-item>
+                <a-asset-item id="ear-mtl" src="model_obj/ear/ear.mtl"></a-asset-item>
+            </a-assets>
+            
+            <a-assets>
+                <a-asset-item id="hert-obj" src="model_obj/heart/hert.obj"></a-asset-item>
+                <a-asset-item id="hert-mtl" src="model_obj/heart/hert.mtl"></a-asset-item>
+            </a-assets>
+            
+            <a-assets>
+                <a-asset-item id="semi1-obj" src="model_obj/semi/semi1.obj"></a-asset-item>
+                <a-asset-item id="semi1-mtl" src="model_obj/semi/semi1.mtl"></a-asset-item>
+            </a-assets>
+            
+            <a-assets>
+                <a-asset-item id="lung-obj" src="model_obj/lung/lung.obj"></a-asset-item>
+                <a-asset-item id="lung-mtl" src="model_obj/lung/lung.mtl"></a-asset-item>
+            </a-assets>
+            
+            <a-assets>
+                <a-asset-item id="heart-obj" src="model_obj/lung/lung.obj"></a-asset-item>
+                <a-asset-item id="heart-mtl" src="model_obj/lung/lung.mtl"></a-asset-item>
+            </a-assets>
+            
+            <a-assets>
+                <a-asset-item id="mind-obj" src="model_obj/mind/mind.obj"></a-asset-item>
+                <a-asset-item id="mind-mtl" src="model_obj/mind/mind.mtl"></a-asset-item>
+            </a-assets>
+            
+            
+            
+             <!-- ARマーカー指定部分 -->
+            <a-marker preset="custom" type='pattern' url="pattern-logo.patt">                 
+                <a-obj-model id="stomach" src="#stomac-obj" mtl="#stomac-mtl" position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0"></a-obj-model>
+                <a-text value="!!!STOMACH!!!" position=" 0 0 1" align="center" rotation="-90 0 0" color="#7993ff"></a-text>
+            </a-marker>
+            
+            <a-marker preset="custom" type='pattern' url="stomach.patt">                 
+                <a-obj-model id="stomach" src="#stomach-obj" mtl="#stomach-mtl" position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0"></a-obj-model>
+                <a-text value="!!!STOMACH!!!" position=" 0 0 1" align="center" rotation="-90 0 0" color="#7993ff"></a-text>
+            </a-marker>
+            
+            <a-marker preset="custom" type='pattern' url="brain.patt">                 
+                <a-obj-model id="brain" src="#brain-obj" mtl="#brain-mtl" position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0"></a-obj-model>
+                <a-text value="!!!BRAIN!!!" position=" 0 0 1" align="center" rotation="-90 0 0" color="#7993ff"></a-text>
+            </a-marker>
+            
+            <a-marker preset="custom" type='pattern' url="butterfly.patt">                 
+                <a-obj-model id="butterfly" src="#butterfly-obj" mtl="#butterfly-mtl" position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0"></a-obj-model>
+                <a-text value="!!!BUTTERFLY!!!" position=" 0 0 1" align="center" rotation="-90 0 0" color="#7993ff"></a-text>
+            </a-marker>
+            
+            <a-marker preset="custom" type='pattern' url="ear.patt">                 
+                <a-obj-model id="ear" src="#ear-obj" mtl="#ear-mtl" position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0"></a-obj-model>
+                <a-text value="!!!EAR!!!" position=" 0 0 1" align="center" rotation="-90 0 0" color="#7993ff"></a-text>
+            </a-marker>
+            
+            <a-marker preset="custom" type='pattern' url="heart.patt">                 
+                <a-obj-model id="hert" src="#hert-obj" mtl="#hert-mtl" position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0"></a-obj-model>
+                <a-text value="!!!HEART!!!" position=" 0 0 1" align="center" rotation="-90 0 0" color="#7993ff"></a-text>
+            </a-marker>
+            
+            <a-marker preset="custom" type='pattern' url="semi.patt">                 
+                <a-obj-model id="semi" src="#semi1-obj" mtl="#semi1-mtl" position="0 0 0" scale="0.1 0.1 0.1" rotation="0 0 0"></a-obj-model>
+                <a-text value="!!!SEMI!!!" position=" 0 0 1" align="center" rotation="-90 0 0" color="#7993ff"></a-text>
+            </a-marker>
+            
+            <a-marker preset="custom" type='pattern' url="lung.patt">                 
+                <a-obj-model id="lung" src="#lung-obj" mtl="#lung-mtl" position="0 0 0" scale="0.3 0.3 0.3" rotation="0 0 0"></a-obj-model>
+                <a-text value="!!!LUNG!!!" position=" 0 0 1" align="center" rotation="-90 0 0" color="#7993ff"></a-text>
+            </a-marker>
+            
+            <a-marker preset="custom" type='pattern' url="mind.patt">                 
+                <a-obj-model id="mind" src="#mind-obj" mtl="#mind-mtl" position="0 0 0" scale="0.5 0.5 0.5" rotation="90 0 0"></a-obj-model>
+                <a-text value="!!!MIND!!!" position=" 0 0 1" align="center" rotation="-90 0 0" color="#7993ff"></a-text>
+            </a-marker>
+            
+            
+            
+            
+            
+             <a-entity camera></a-entity>
+        </a-scene>
+        
+       
+        
+    </body>
+</html>
